@@ -19,13 +19,17 @@ private:
     int _errorB = 0;
 
     
-    String _ssid = "";
-    String _password = "";
-    String _mqtt_server = "";
+    char _ssid[100];
+    char _password[100];
+    char _mqtt_server[100];
     int _mqtt_port = 1883;
+
+    bool setup_wifi();
+    void reconnect();
 
 public:
     Haxee_ESP32(String ssid, String password, String mqtt_server, int mqtt_port);
+    //Haxee_ESP32();
 
     enum MessageType { Error, Success, Info };
     
@@ -37,9 +41,8 @@ public:
     void ledSuccess();
     void ledInfo();
 
-    void reconnect();
-    void callback();
     void publish(String topic, String text);
+    static void callback(char* topic, byte* message, unsigned int length);
 };
 
 #endif
