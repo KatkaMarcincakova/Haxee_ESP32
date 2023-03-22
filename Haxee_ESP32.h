@@ -6,17 +6,11 @@
 class Haxee_ESP32
 {
 private:
-    int _successR = 0;
-    int _successG = 255;
-    int _successB = 0;
+    int _success[3] = {0, 255, 0};
 
-    int _infoR = 0;
-    int _infoG = 0;
-    int _infoB = 255;
+    int _info[3] = {0, 0, 255};
 
-    int _errorR = 255;
-    int _errorG = 0;
-    int _errorB = 0;
+    int _error[3] = {255, 0, 0};
 
     
     char _ssid[100];
@@ -25,24 +19,26 @@ private:
     int _mqtt_port = 1883;
 
     bool setup_wifi();
-    void reconnect();
 
 public:
-    Haxee_ESP32(String ssid, String password, String mqtt_server, int mqtt_port);
-    //Haxee_ESP32();
+    Haxee_ESP32(String ssid, String password, String mqtt_server, int mqtt_port, String t);
+    Haxee_ESP32();
 
     enum MessageType { Error, Success, Info };
     
+    String topic = "";
+
     bool setup();
     String readCard();
 
     void setupMessageColor(MessageType type, int r, int g, int b);
-    void ledError();
-    void ledSuccess();
-    void ledInfo();
 
     void publish(String topic, String text);
     static void callback(char* topic, byte* message, unsigned int length);
+    void reconnect();
+    bool clientConnected();
+    void clientLoop();
+    void lightLed(MessageType type);
 };
 
 #endif

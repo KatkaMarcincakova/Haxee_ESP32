@@ -2,19 +2,18 @@
 #include <PubSubClient.h>
 #include <Wire.h>
 #include <KiTECH_LEDStripe.h>
-#include <KiTECH_OLED_S.h>
 #include <KiTECH_RC522.h>
 #include "Haxee_ESP32.h"
 
-
-Haxee_ESP32::Haxee_ESP32(String ssid, String password, String mqtt_server, int mqtt_port) {
-    ssid.toCharArray(_ssid, ssid.length());
-    password.toCharArray(_password, password.length());
-    mqtt_server.toCharArray(_mqtt_server, mqtt_server.length());
+Haxee_ESP32::Haxee_ESP32(String ssid, String password, String mqtt_server, int mqtt_port, String t) {
+    ssid.toCharArray(_ssid, (ssid.length() + 1));
+    password.toCharArray(_password, (password.length() + 1));
+    mqtt_server.toCharArray(_mqtt_server, (mqtt_server.length() + 1));
     _mqtt_port = mqtt_port;
+    topic = t;
 }
 
-//Haxee_ESP32::~Haxee_ESP32(){}
+Haxee_ESP32::Haxee_ESP32() {}
 
 KiTECH_LEDStripe ledstripe;
 KiTECH_RC522 reader;
@@ -25,7 +24,9 @@ bool Haxee_ESP32::setup_wifi() {
     delay(10);
     Serial.println();
     Serial.print("Connecting to ");
-    Serial.println(_ssid);
+  Serial.print(_ssid);
+  Serial.print(_password);
+  Serial.print("xx");
 
     WiFi.begin(_ssid, _password);
 
@@ -76,35 +77,33 @@ bool Haxee_ESP32::setup() {
 void Haxee_ESP32::setupMessageColor(MessageType type, int r, int g, int b) {
     switch (type) {
         case Error:
-            _errorR = r;
-            _errorG = g;
-            _errorB = b;
+            _error[0] = r;
+            _error[1] = g;
+            _error[2] = b;
             break;
         case Info:
-            _infoR = r;
-            _infoG = g;
-            _infoB = b;
+            _info[0] = r;
+            _info[1] = g;
+            _info[2] = b;
             break;
         case Success:
-            _successR = r;
-            _successG = g;
-            _successB = b;
+            _success[0] = r;
+            _success[1] = g;
+            _success[2] = b;
             break;
         default:
             break;
     }
 }
 
-void Haxee_ESP32::ledError() {
-    ledstripe.show_color(_errorR, _errorG, _errorB);
-}
-
-void Haxee_ESP32::ledInfo() {
-    ledstripe.show_color(_infoR, _infoG, _infoB);
-}
-
-void Haxee_ESP32::ledSuccess() {
-    ledstripe.show_color(_successR, _successG, _successB);
+void Haxee_ESP32::lightLed(MessageType type) {
+    if (type == Error) {
+        ledstripe.show_color(_error[0], _error[1], _error[2]);
+    } else if (type == Success) {
+        ledstripe.show_color(_success[0], _success[1], _success[2]);
+    } else {
+        ledstripe.show_color(_info[0], _info[1], _info[2]);
+    }
 }
 
 String Haxee_ESP32::readCard() {
@@ -116,9 +115,66 @@ String Haxee_ESP32::readCard() {
 }
 
 void Haxee_ESP32::callback(char* topic, byte* message, unsigned int length) {
+    Serial.print("Message arrived on topic: ");
+    Serial.print(topic);
+    Serial.print(". Message: ");
+    String messageTemp;
+    
+    for (int i = 0; i < length; i++) {
+        Serial.print((char)message[i]);
+        messageTemp += (char)message[i];
+    }
+    Serial.println();
 
+    if (String(topic) == "start/checkResult") {
+      Haxee_ESP32 h;
+        if(messageTemp == "0"){
+            h.lightLed(Error);
+            delay(1500);
+        }
+        else if(messageTemp == "1"){
+            h.lightLed(Success);
+            delay(1500);
+        } else {
+            h.lightLed(Info);
+        }
+    }
+}
+
+void Haxee_ESP32::reconnect() {
+    while (!client.connected()) {
+    Serial.print("Attempting MQTT connection ");
+    Serial.print(_mqtt_server);
+    Serial.print(" ");
+    Serial.print(_mqtt_port);
+    Serial.print(" ...");
+    
+    if (client.connect("ESP32Client")) {
+      Serial.println("connected");
+      
+      client.subscribe("start/checkResult");
+    } else {
+      Serial.print("failed, rc=");
+      Serial.print(client.state());
+      Serial.println(" try again in 5 seconds");
+      
+      delay(5000);
+    }
+  }
+}
+
+bool Haxee_ESP32::clientConnected() {
+    return client.connected();
+}
+
+void Haxee_ESP32::clientLoop() {
+    client.loop();
 }
 
 void Haxee_ESP32::publish(String topic, String text) {
-
+    char t[100];
+    topic.toCharArray(t, (topic.length()+1));
+    char tx[100];
+    text.toCharArray(tx, (text.length()+1));
+    client.publish(t, tx);
 }
