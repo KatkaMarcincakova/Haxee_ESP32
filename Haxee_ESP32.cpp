@@ -1,6 +1,8 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 #include <Wire.h>
+#include <NTPClient.h>
+#include <WiFiUdp.h>
 #include <KiTECH_LEDStripe.h>
 #include <KiTECH_RC522.h>
 #include "Haxee_ESP32.h"
@@ -19,14 +21,13 @@ KiTECH_LEDStripe ledstripe;
 KiTECH_RC522 reader;
 WiFiClient espClient;
 PubSubClient client(espClient);
+WiFiUDP ntpUDP;
+NTPClient timeClient(ntpUDP);
 
 bool Haxee_ESP32::setup_wifi() {
     delay(10);
     Serial.println();
     Serial.print("Connecting to ");
-  Serial.print(_ssid);
-  Serial.print(_password);
-  Serial.print("xx");
 
     WiFi.begin(_ssid, _password);
 
@@ -70,6 +71,8 @@ bool Haxee_ESP32::setup() {
 
     client.setServer(_mqtt_server, _mqtt_port);
     client.setCallback(callback);
+    timeClient.begin();
+    timeClient.setTimeOffset(3600);
 
     return true;
 }
@@ -169,6 +172,21 @@ bool Haxee_ESP32::clientConnected() {
 
 void Haxee_ESP32::clientLoop() {
     client.loop();
+}
+
+void Haxee_ESP32::timeLoop() {
+  while(!timeClient.update()) {
+    timeClient.forceUpdate();
+  }
+}
+
+String Haxee_ESP32::formatMessage(String cardID) {
+  String message = cardID;
+  message.concat("|");
+  message.concat(timeClient.getFormattedDate());
+  message.concat("|");
+  message.concat("Start");
+  return message;
 }
 
 void Haxee_ESP32::publish(String topic, String text) {

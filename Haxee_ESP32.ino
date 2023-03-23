@@ -1,6 +1,6 @@
 #include "Haxee_ESP32.h"
 
-Haxee_ESP32 device("dominion2.4", "bobalkY21a", "192.168.0.244", 1883, "start/cardID");
+Haxee_ESP32 device("dominion2.4", "bobalkY21a", "192.168.0.244", 1883, "2023/start/cardID");
 
 void setup() {
     Serial.begin(9600);
@@ -13,6 +13,7 @@ void setup() {
 }
 
 void loop() {
+  device.timeLoop();
   if (!device.clientConnected()) {
     device.reconnect();
   }
@@ -26,7 +27,7 @@ void loop() {
   if (card != "Waiting for card") {
     Serial.print("pub ");
     Serial.println(device.topic);
-    device.publish(device.topic, card);
+    device.publish(device.topic, device.formatMessage(card));
   } else {
     delay(500);
   }

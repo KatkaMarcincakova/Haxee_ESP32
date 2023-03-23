@@ -30,6 +30,7 @@ public:
 
     bool setup();
     String readCard();
+    String formatMessage(String cardID);
 
     void setupMessageColor(MessageType type, int r, int g, int b);
 
@@ -38,6 +39,7 @@ public:
     void reconnect();
     bool clientConnected();
     void clientLoop();
+    void timeLoop();
     void lightLed(MessageType type);
 };
 
