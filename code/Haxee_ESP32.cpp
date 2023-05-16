@@ -184,8 +184,6 @@ String Haxee_ESP32::formatMessage(String cardID) {
   String message = cardID;
   message.concat("|");
   message.concat(timeClient.getFormattedDate());
-  message.concat("|");
-  message.concat("Start");
   return message;
 }
 
