@@ -1,37 +1,45 @@
-#include "Haxee_ESP32.h"
+#include "Haxee_ESP32_LEDStripe.h"
+#include "Haxee_ESP32_MFRC522.h"
+#include "Haxee_ESP32_MQTT.h"
+#include "Haxee_ESP32_Helper.h"
 
 void setup() {
-	Haxee_ESP32 device("dominion2.4", "bobalk21a", "192.168.0.244", 1883, "2023/start/cardID");
+	Haxee_ESP32_MQTT mqtt("dominion2.4", "bobalkY21a", "192.168.0.244", 1883, "2023/start/checkResult", "2023/start");
+	Haxee_ESP32_LEDStripe ledstripe;
+	Haxee_ESP32_MFRC522 reader;
+	Haxee_ESP32_Helper helper;
+
     Serial.begin(9600);
-    if (device.setup()) {
+
+    if (mqtt.setup() && ledstripe.setup() && reader.setup() && helper.setup()) {
   		Serial.println("setup OK");
   		for (;;) {
-  			cardReader(device);
+  			cardReader(mqtt, ledstripe, reader, helper);
   		}
     } else {
   		for (;;) {
-        device.error();
+        helper.error();
       }
       	Serial.println("setup FAIL");  
     }
 }
 
-void cardReader(Haxee_ESP32 device) {
-	device.timeLoop();
-	if (!device.clientConnected()) {
-		device.reconnect();
+void cardReader(Haxee_ESP32_MQTT mqtt, Haxee_ESP32_LEDStripe ledstripe, Haxee_ESP32_MFRC522 reader, Haxee_ESP32_Helper helper) {
+	helper.timeLoop();
+
+	if (!mqtt.clientConnected()) {
+		mqtt.connect();
 	}
 
-	device.clientLoop();
+	mqtt.clientLoop();
 
-	device.lightLed(device.Info);
-	String card = device.readCard();
+	ledstripe.lightInfo();
+	String card = reader.readCard();
 	Serial.println(card);
-	
+
 	if (card != "Waiting for card") {
 		Serial.print("pub ");
-		Serial.println(device.topic);
-		device.publish(device.topic, device.formatMessage(card));
+		mqtt.publish("", helper.formatMessage(card));
 	} else {
 		delay(500);
 	}

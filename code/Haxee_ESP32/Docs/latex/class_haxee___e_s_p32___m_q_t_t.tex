@@ -1,0 +1,182 @@
+\doxysection{Dokumentácia triedy Haxee\+\_\+\+ESP32\+\_\+\+MQTT}
+\hypertarget{class_haxee___e_s_p32___m_q_t_t}{}\label{class_haxee___e_s_p32___m_q_t_t}\index{Haxee\_ESP32\_MQTT@{Haxee\_ESP32\_MQTT}}
+\doxysubsubsection*{Verejné metódy}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_haxee___e_s_p32___m_q_t_t_af0af535716f9ff00d969947ce789ffbf}{Haxee\+\_\+\+ESP32\+\_\+\+MQTT}} (String ssid, String password, String mqtt\+\_\+server, int mqtt\+\_\+port, String t\+\_\+sub, String t\+\_\+pub)
+\begin{DoxyCompactList}\small\item\em Konštruktor triedy \doxylink{class_haxee___e_s_p32___m_q_t_t}{Haxee\+\_\+\+ESP32\+\_\+\+MQTT}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_haxee___e_s_p32___m_q_t_t_a86eaf61cc0e02fd8acb278c4b183c5d1}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Pripojenie na internet a nastavenie pre komunikáciu s MQTT broker-\/om. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haxee___e_s_p32___m_q_t_t_add15b10cfa71e755ea70ec2dc57bf7c0}{publish}} (String topic, String text)
+\begin{DoxyCompactList}\small\item\em Odošle správu na MQTT broker. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haxee___e_s_p32___m_q_t_t_a57b8fd2cc282db4bf886c3d172a2c183}{connect}} ()
+\begin{DoxyCompactList}\small\item\em Pripojenie na MQTT broker. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_haxee___e_s_p32___m_q_t_t_ab966eca32fc93f9e9baee6c446228c7e}{client\+Connected}} ()
+\begin{DoxyCompactList}\small\item\em Kontrola pripojenia na MQTT broker. \end{DoxyCompactList}\item 
+\Hypertarget{class_haxee___e_s_p32___m_q_t_t_a5f1468ddfe7974bd49ef709ad1251a05}\label{class_haxee___e_s_p32___m_q_t_t_a5f1468ddfe7974bd49ef709ad1251a05} 
+void {\bfseries client\+Loop} ()
+\begin{DoxyCompactList}\small\item\em Udržiavanie komunikácie s MQTT broker-\/om. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statické verejné metódy}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_haxee___e_s_p32___m_q_t_t_a1965c386dc65dffd22f0cb7df403a93e}{callback}} (char \texorpdfstring{$\ast$}{*}topic, byte \texorpdfstring{$\ast$}{*}message, unsigned int length)
+\begin{DoxyCompactList}\small\item\em Spracovanie prijatých správ. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Privátne metódy}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_haxee___e_s_p32___m_q_t_t_a2388e31004148fb7ac62ac6b874753ae}{setup\+\_\+wifi}} ()
+\begin{DoxyCompactList}\small\item\em Pripojenie na internet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Privátne atribúty}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_haxee___e_s_p32___m_q_t_t_a51d874fc531a3b8e96d0ddaae569b64e}\label{class_haxee___e_s_p32___m_q_t_t_a51d874fc531a3b8e96d0ddaae569b64e} 
+char {\bfseries \+\_\+ssid} \mbox{[}100\mbox{]}
+\item 
+\Hypertarget{class_haxee___e_s_p32___m_q_t_t_ac8514be53d89712582d42d7f34a0ee1e}\label{class_haxee___e_s_p32___m_q_t_t_ac8514be53d89712582d42d7f34a0ee1e} 
+char {\bfseries \+\_\+password} \mbox{[}100\mbox{]}
+\item 
+\Hypertarget{class_haxee___e_s_p32___m_q_t_t_a413bb0d3710b2961bc59f633e930c39c}\label{class_haxee___e_s_p32___m_q_t_t_a413bb0d3710b2961bc59f633e930c39c} 
+char {\bfseries \+\_\+mqtt\+\_\+server} \mbox{[}100\mbox{]}
+\item 
+\Hypertarget{class_haxee___e_s_p32___m_q_t_t_a75d0b963449bfdc9dd65e6e6248b0f42}\label{class_haxee___e_s_p32___m_q_t_t_a75d0b963449bfdc9dd65e6e6248b0f42} 
+int {\bfseries \+\_\+mqtt\+\_\+port} = 1883
+\item 
+\Hypertarget{class_haxee___e_s_p32___m_q_t_t_aed0f01c21fc61004c3fa4eeb71ff6217}\label{class_haxee___e_s_p32___m_q_t_t_aed0f01c21fc61004c3fa4eeb71ff6217} 
+String {\bfseries \+\_\+topic\+\_\+sub} = \"{}sub\"{}
+\item 
+\Hypertarget{class_haxee___e_s_p32___m_q_t_t_a6f1a83c12be38cb474fdc225b6f63714}\label{class_haxee___e_s_p32___m_q_t_t_a6f1a83c12be38cb474fdc225b6f63714} 
+String {\bfseries \+\_\+topic\+\_\+pub} = \"{}pub\"{}
+\item 
+\Hypertarget{class_haxee___e_s_p32___m_q_t_t_aa816f5d027dfb4b93bbb25b1b1dc02d2}\label{class_haxee___e_s_p32___m_q_t_t_aa816f5d027dfb4b93bbb25b1b1dc02d2} 
+unsigned long {\bfseries prev\+\_\+millis} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentácia konštruktoru a deštruktoru}
+\Hypertarget{class_haxee___e_s_p32___m_q_t_t_af0af535716f9ff00d969947ce789ffbf}\label{class_haxee___e_s_p32___m_q_t_t_af0af535716f9ff00d969947ce789ffbf} 
+\index{Haxee\_ESP32\_MQTT@{Haxee\_ESP32\_MQTT}!Haxee\_ESP32\_MQTT@{Haxee\_ESP32\_MQTT}}
+\index{Haxee\_ESP32\_MQTT@{Haxee\_ESP32\_MQTT}!Haxee\_ESP32\_MQTT@{Haxee\_ESP32\_MQTT}}
+\doxysubsubsection{\texorpdfstring{Haxee\_ESP32\_MQTT()}{Haxee\_ESP32\_MQTT()}}
+{\footnotesize\ttfamily Haxee\+\_\+\+ESP32\+\_\+\+MQTT\+::\+Haxee\+\_\+\+ESP32\+\_\+\+MQTT (\begin{DoxyParamCaption}\item[{String}]{ssid,  }\item[{String}]{password,  }\item[{String}]{mqtt\+\_\+server,  }\item[{int}]{mqtt\+\_\+port,  }\item[{String}]{t\+\_\+sub,  }\item[{String}]{t\+\_\+pub }\end{DoxyParamCaption})}
+
+
+
+Konštruktor triedy \doxylink{class_haxee___e_s_p32___m_q_t_t}{Haxee\+\_\+\+ESP32\+\_\+\+MQTT}. 
+
+
+\begin{DoxyParams}{Parametre}
+{\em ssid} & ssid siete \\
+\hline
+{\em password} & heslo do siete \\
+\hline
+{\em mqtt\+\_\+server} & IP adresa, na ktorej je spustený MQTT broker \\
+\hline
+{\em mqtt\+\_\+port} & port, na ktorom je spustený MQTT broker \\
+\hline
+{\em t\+\_\+sub} & téma, pod ktorou odoberá správy \\
+\hline
+{\em t\+\_\+pub} & téma pod ktorou publikuje správy \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentácia k metódam}
+\Hypertarget{class_haxee___e_s_p32___m_q_t_t_a1965c386dc65dffd22f0cb7df403a93e}\label{class_haxee___e_s_p32___m_q_t_t_a1965c386dc65dffd22f0cb7df403a93e} 
+\index{Haxee\_ESP32\_MQTT@{Haxee\_ESP32\_MQTT}!callback@{callback}}
+\index{callback@{callback}!Haxee\_ESP32\_MQTT@{Haxee\_ESP32\_MQTT}}
+\doxysubsubsection{\texorpdfstring{callback()}{callback()}}
+{\footnotesize\ttfamily void Haxee\+\_\+\+ESP32\+\_\+\+MQTT\+::callback (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{topic,  }\item[{byte \texorpdfstring{$\ast$}{*}}]{message,  }\item[{unsigned int}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Spracovanie prijatých správ. 
+
+Funkcia spracuváva správy prijaté od MQTT brokera pod predom zadanou témou
+
+
+\begin{DoxyParams}{Parametre}
+{\em topic} & téma, pod ktorou správa prišla \\
+\hline
+{\em message} & správa \\
+\hline
+{\em length} & dĺžka správy \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_haxee___e_s_p32___m_q_t_t_ab966eca32fc93f9e9baee6c446228c7e}\label{class_haxee___e_s_p32___m_q_t_t_ab966eca32fc93f9e9baee6c446228c7e} 
+\index{Haxee\_ESP32\_MQTT@{Haxee\_ESP32\_MQTT}!clientConnected@{clientConnected}}
+\index{clientConnected@{clientConnected}!Haxee\_ESP32\_MQTT@{Haxee\_ESP32\_MQTT}}
+\doxysubsubsection{\texorpdfstring{clientConnected()}{clientConnected()}}
+{\footnotesize\ttfamily bool Haxee\+\_\+\+ESP32\+\_\+\+MQTT\+::client\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Kontrola pripojenia na MQTT broker. 
+
+Funkcia overí, či nedošlo k prerušeniu komunikácie s MQTT broker-\/om
+
+\begin{DoxyReturn}{Návratová hodnota}
+vracia informáciu o tom, či pripojenie je stále udržané 
+\end{DoxyReturn}
+\Hypertarget{class_haxee___e_s_p32___m_q_t_t_a57b8fd2cc282db4bf886c3d172a2c183}\label{class_haxee___e_s_p32___m_q_t_t_a57b8fd2cc282db4bf886c3d172a2c183} 
+\index{Haxee\_ESP32\_MQTT@{Haxee\_ESP32\_MQTT}!connect@{connect}}
+\index{connect@{connect}!Haxee\_ESP32\_MQTT@{Haxee\_ESP32\_MQTT}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily void Haxee\+\_\+\+ESP32\+\_\+\+MQTT\+::connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pripojenie na MQTT broker. 
+
+Funkcia sa pokúša pripojiť na MQTT broker a zadať témy, ktoré má zaujem odoberať. Na signalizáciu napájania sa rozsvieti modrá LED dióda na mikrokontroléri. Akonáhle pripojenie je úspešné, LED dióda zhasne. \Hypertarget{class_haxee___e_s_p32___m_q_t_t_add15b10cfa71e755ea70ec2dc57bf7c0}\label{class_haxee___e_s_p32___m_q_t_t_add15b10cfa71e755ea70ec2dc57bf7c0} 
+\index{Haxee\_ESP32\_MQTT@{Haxee\_ESP32\_MQTT}!publish@{publish}}
+\index{publish@{publish}!Haxee\_ESP32\_MQTT@{Haxee\_ESP32\_MQTT}}
+\doxysubsubsection{\texorpdfstring{publish()}{publish()}}
+{\footnotesize\ttfamily void Haxee\+\_\+\+ESP32\+\_\+\+MQTT\+::publish (\begin{DoxyParamCaption}\item[{String}]{topic,  }\item[{String}]{text }\end{DoxyParamCaption})}
+
+
+
+Odošle správu na MQTT broker. 
+
+Funkcia odošle zadanú správu na MQTT broker. V prípade, že téma na vstupe je null, odošle správu pod základnou témou -\/ témou, ktorá bola zadaná konštruktorom.
+
+
+\begin{DoxyParams}{Parametre}
+{\em topic} & téma, pod ktorou má odoslať správu \\
+\hline
+{\em text} & správa, ktorú má odoslať \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_haxee___e_s_p32___m_q_t_t_a86eaf61cc0e02fd8acb278c4b183c5d1}\label{class_haxee___e_s_p32___m_q_t_t_a86eaf61cc0e02fd8acb278c4b183c5d1} 
+\index{Haxee\_ESP32\_MQTT@{Haxee\_ESP32\_MQTT}!setup@{setup}}
+\index{setup@{setup}!Haxee\_ESP32\_MQTT@{Haxee\_ESP32\_MQTT}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily bool Haxee\+\_\+\+ESP32\+\_\+\+MQTT\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pripojenie na internet a nastavenie pre komunikáciu s MQTT broker-\/om. 
+
+\begin{DoxyReturn}{Návratová hodnota}
+vracia informáciu o tom, či pripojenie a nastavenie bolo úspešné alebo nie 
+\end{DoxyReturn}
+\Hypertarget{class_haxee___e_s_p32___m_q_t_t_a2388e31004148fb7ac62ac6b874753ae}\label{class_haxee___e_s_p32___m_q_t_t_a2388e31004148fb7ac62ac6b874753ae} 
+\index{Haxee\_ESP32\_MQTT@{Haxee\_ESP32\_MQTT}!setup\_wifi@{setup\_wifi}}
+\index{setup\_wifi@{setup\_wifi}!Haxee\_ESP32\_MQTT@{Haxee\_ESP32\_MQTT}}
+\doxysubsubsection{\texorpdfstring{setup\_wifi()}{setup\_wifi()}}
+{\footnotesize\ttfamily bool Haxee\+\_\+\+ESP32\+\_\+\+MQTT\+::setup\+\_\+wifi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Pripojenie na internet. 
+
+Funkcia sa za pomoci získaného ssid a hesla pripojí do siete
+
+\begin{DoxyReturn}{Návratová hodnota}
+vracia informáciu o tom, či pripojenie bolo úspešné alebo nie 
+\end{DoxyReturn}
+
+
+Dokumentácia pre túto triedu bola generovaná z nasledujúcich súborov\+:\begin{DoxyCompactItemize}
+\item 
+Haxee\+\_\+\+ESP32\+\_\+\+MQTT.\+h\item 
+Haxee\+\_\+\+ESP32\+\_\+\+MQTT.\+cpp\end{DoxyCompactItemize}

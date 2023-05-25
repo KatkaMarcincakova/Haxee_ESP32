@@ -1,0 +1,72 @@
+\doxysection{Dokumentácia triedy Haxee\+\_\+\+ESP32\+\_\+\+Helper}
+\hypertarget{class_haxee___e_s_p32___helper}{}\label{class_haxee___e_s_p32___helper}\index{Haxee\_ESP32\_Helper@{Haxee\_ESP32\_Helper}}
+\doxysubsubsection*{Verejné metódy}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_haxee___e_s_p32___helper_a0d117e49a0bf383e606e1db9ecc9cbcf}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Úvodné nastavenie. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_haxee___e_s_p32___helper_aa676ab2d3b4818d1bf5c9db2aaa69539}{format\+Message}} (String card\+ID)
+\begin{DoxyCompactList}\small\item\em Naformátovanie správy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haxee___e_s_p32___helper_a916d9b53aea758de2f2825c16d9e1c8a}{time\+Loop}} ()
+\begin{DoxyCompactList}\small\item\em Aktualizácia času. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haxee___e_s_p32___helper_a792bc7be43c75daf13e36469a1721295}{error}} ()
+\begin{DoxyCompactList}\small\item\em Naznačenie problému blikaním LED diódy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentácia k metódam}
+\Hypertarget{class_haxee___e_s_p32___helper_a792bc7be43c75daf13e36469a1721295}\label{class_haxee___e_s_p32___helper_a792bc7be43c75daf13e36469a1721295} 
+\index{Haxee\_ESP32\_Helper@{Haxee\_ESP32\_Helper}!error@{error}}
+\index{error@{error}!Haxee\_ESP32\_Helper@{Haxee\_ESP32\_Helper}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily void Haxee\+\_\+\+ESP32\+\_\+\+Helper\+::error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Naznačenie problému blikaním LED diódy. 
+
+Funkcia rozbliká integrovanú LED diódu na doske. \Hypertarget{class_haxee___e_s_p32___helper_aa676ab2d3b4818d1bf5c9db2aaa69539}\label{class_haxee___e_s_p32___helper_aa676ab2d3b4818d1bf5c9db2aaa69539} 
+\index{Haxee\_ESP32\_Helper@{Haxee\_ESP32\_Helper}!formatMessage@{formatMessage}}
+\index{formatMessage@{formatMessage}!Haxee\_ESP32\_Helper@{Haxee\_ESP32\_Helper}}
+\doxysubsubsection{\texorpdfstring{formatMessage()}{formatMessage()}}
+{\footnotesize\ttfamily String Haxee\+\_\+\+ESP32\+\_\+\+Helper\+::format\+Message (\begin{DoxyParamCaption}\item[{String}]{card\+ID }\end{DoxyParamCaption})}
+
+
+
+Naformátovanie správy. 
+
+Funkcia vytvorí z parametrku card\+ID a aktuálneho času reťazec. card\+ID a aktuálny čas je rozdelené \texorpdfstring{$\vert$}{|}.
+
+\begin{DoxyReturn}{Návratová hodnota}
+výsledný reťazec vo formáte e2\+:1b\+:dd\+:2a\texorpdfstring{$\vert$}{|}rrrr-\/mm-\/dd\+Thh\+:mm\+:ssZ 
+\end{DoxyReturn}
+\Hypertarget{class_haxee___e_s_p32___helper_a0d117e49a0bf383e606e1db9ecc9cbcf}\label{class_haxee___e_s_p32___helper_a0d117e49a0bf383e606e1db9ecc9cbcf} 
+\index{Haxee\_ESP32\_Helper@{Haxee\_ESP32\_Helper}!setup@{setup}}
+\index{setup@{setup}!Haxee\_ESP32\_Helper@{Haxee\_ESP32\_Helper}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily bool Haxee\+\_\+\+ESP32\+\_\+\+Helper\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Úvodné nastavenie. 
+
+Funkcia nastaví pin 2 (pin integrovanej LED diódy) na OUTPUT a spustí sa klient pre získavanie času
+
+\begin{DoxyReturn}{Návratová hodnota}
+vracia informáciu o tom, či pripojenie a nastavenie bolo úspešné alebo nie 
+\end{DoxyReturn}
+\Hypertarget{class_haxee___e_s_p32___helper_a916d9b53aea758de2f2825c16d9e1c8a}\label{class_haxee___e_s_p32___helper_a916d9b53aea758de2f2825c16d9e1c8a} 
+\index{Haxee\_ESP32\_Helper@{Haxee\_ESP32\_Helper}!timeLoop@{timeLoop}}
+\index{timeLoop@{timeLoop}!Haxee\_ESP32\_Helper@{Haxee\_ESP32\_Helper}}
+\doxysubsubsection{\texorpdfstring{timeLoop()}{timeLoop()}}
+{\footnotesize\ttfamily void Haxee\+\_\+\+ESP32\+\_\+\+Helper\+::time\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Aktualizácia času. 
+
+
+
+Dokumentácia pre túto triedu bola generovaná z nasledujúcich súborov\+:\begin{DoxyCompactItemize}
+\item 
+Haxee\+\_\+\+ESP32\+\_\+\+Helper.\+h\item 
+Haxee\+\_\+\+ESP32\+\_\+\+Helper.\+cpp\end{DoxyCompactItemize}

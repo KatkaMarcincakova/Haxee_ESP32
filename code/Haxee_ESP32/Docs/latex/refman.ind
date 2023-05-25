@@ -1,26 +1,62 @@
 \begin{theindex}
 
-  \item {Haxee\_ESP32}, \hyperpage{5}
+  \item {callback}
+    \subitem {Haxee\_ESP32\_MQTT}, \hyperpage{10}
+  \item {clientConnected}
+    \subitem {Haxee\_ESP32\_MQTT}, \hyperpage{11}
+  \item {connect}
+    \subitem {Haxee\_ESP32\_MQTT}, \hyperpage{11}
+
+  \indexspace
+
+  \item {error}
+    \subitem {Haxee\_ESP32\_Helper}, \hyperpage{5}
+
+  \indexspace
+
+  \item {formatMessage}
+    \subitem {Haxee\_ESP32\_Helper}, \hyperpage{5}
+
+  \indexspace
+
+  \item {Haxee\_ESP32\_Helper}, \hyperpage{5}
+    \subitem {error}, \hyperpage{5}
+    \subitem {formatMessage}, \hyperpage{5}
+    \subitem {setup}, \hyperpage{5}
+    \subitem {timeLoop}, \hyperpage{6}
   \item {Haxee\_ESP32\_LEDStripe}, \hyperpage{6}
-    \subitem {lightError}, \hyperpage{6}
-    \subitem {lightInfo}, \hyperpage{6}
+    \subitem {lightError}, \hyperpage{7}
+    \subitem {lightInfo}, \hyperpage{7}
     \subitem {lightSuccess}, \hyperpage{7}
     \subitem {setError}, \hyperpage{7}
     \subitem {setInfo}, \hyperpage{7}
     \subitem {setSuccess}, \hyperpage{8}
     \subitem {setup}, \hyperpage{8}
-  \item {Haxee\_ESP32\_MFRC522}, \hyperpage{8}
+  \item {Haxee\_ESP32\_MFRC522}, \hyperpage{9}
     \subitem {readCard}, \hyperpage{9}
     \subitem {setup}, \hyperpage{9}
+  \item {Haxee\_ESP32\_MQTT}, \hyperpage{9}
+    \subitem {callback}, \hyperpage{10}
+    \subitem {clientConnected}, \hyperpage{11}
+    \subitem {connect}, \hyperpage{11}
+    \subitem {Haxee\_ESP32\_MQTT}, \hyperpage{10}
+    \subitem {publish}, \hyperpage{11}
+    \subitem {setup}, \hyperpage{12}
+    \subitem {setup\_wifi}, \hyperpage{12}
 
   \indexspace
 
   \item {lightError}
-    \subitem {Haxee\_ESP32\_LEDStripe}, \hyperpage{6}
+    \subitem {Haxee\_ESP32\_LEDStripe}, \hyperpage{7}
   \item {lightInfo}
-    \subitem {Haxee\_ESP32\_LEDStripe}, \hyperpage{6}
+    \subitem {Haxee\_ESP32\_LEDStripe}, \hyperpage{7}
   \item {lightSuccess}
     \subitem {Haxee\_ESP32\_LEDStripe}, \hyperpage{7}
+
+  \indexspace
+
+  \item {publish}
+    \subitem {Haxee\_ESP32\_MQTT}, \hyperpage{11}
 
   \indexspace
 
@@ -36,7 +72,16 @@
   \item {setSuccess}
     \subitem {Haxee\_ESP32\_LEDStripe}, \hyperpage{8}
   \item {setup}
+    \subitem {Haxee\_ESP32\_Helper}, \hyperpage{5}
     \subitem {Haxee\_ESP32\_LEDStripe}, \hyperpage{8}
     \subitem {Haxee\_ESP32\_MFRC522}, \hyperpage{9}
+    \subitem {Haxee\_ESP32\_MQTT}, \hyperpage{12}
+  \item {setup\_wifi}
+    \subitem {Haxee\_ESP32\_MQTT}, \hyperpage{12}
+
+  \indexspace
+
+  \item {timeLoop}
+    \subitem {Haxee\_ESP32\_Helper}, \hyperpage{6}
 
 \end{theindex}

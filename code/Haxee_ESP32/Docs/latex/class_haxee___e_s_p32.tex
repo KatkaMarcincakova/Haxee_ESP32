@@ -1,92 +1,69 @@
 \doxysection{Dokumentácia triedy Haxee\+\_\+\+ESP32}
 \hypertarget{class_haxee___e_s_p32}{}\label{class_haxee___e_s_p32}\index{Haxee\_ESP32@{Haxee\_ESP32}}
-\doxysubsubsection*{Verejné typy}
-\begin{DoxyCompactItemize}
-\item 
-\Hypertarget{class_haxee___e_s_p32_a96c15bef7fdd2f214a1143f4e69dd9ad}\label{class_haxee___e_s_p32_a96c15bef7fdd2f214a1143f4e69dd9ad} 
-enum {\bfseries Message\+Type} \{ {\bfseries Error}
-, {\bfseries Success}
-, {\bfseries Info}
- \}
-\end{DoxyCompactItemize}
 \doxysubsubsection*{Verejné metódy}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_haxee___e_s_p32_a738950a8b53676ecd88ce9678b230f79}\label{class_haxee___e_s_p32_a738950a8b53676ecd88ce9678b230f79} 
-{\bfseries Haxee\+\_\+\+ESP32} (String ssid, String password, String mqtt\+\_\+server, int mqtt\+\_\+port, String t)
-\item 
-\Hypertarget{class_haxee___e_s_p32_a660e416cc7700c6abf85f61d6fb7e3c0}\label{class_haxee___e_s_p32_a660e416cc7700c6abf85f61d6fb7e3c0} 
-bool {\bfseries setup} ()
-\item 
-\Hypertarget{class_haxee___e_s_p32_af5c7af97da34a25e4a21677dc3dddc98}\label{class_haxee___e_s_p32_af5c7af97da34a25e4a21677dc3dddc98} 
-String {\bfseries format\+Message} (String card\+ID)
-\item 
-\Hypertarget{class_haxee___e_s_p32_a9dfe3aea67db5dae70baa44d55240dcc}\label{class_haxee___e_s_p32_a9dfe3aea67db5dae70baa44d55240dcc} 
-void {\bfseries setup\+Message\+Color} (Message\+Type type, int r, int g, int b)
-\item 
-\Hypertarget{class_haxee___e_s_p32_aec9680ef4cbcf566deaa9d5387f0794e}\label{class_haxee___e_s_p32_aec9680ef4cbcf566deaa9d5387f0794e} 
-void {\bfseries publish} (String topic, String text)
-\item 
-\Hypertarget{class_haxee___e_s_p32_a11869e686e1f0fecfe2d5d08e2df7eff}\label{class_haxee___e_s_p32_a11869e686e1f0fecfe2d5d08e2df7eff} 
-void {\bfseries reconnect} ()
-\item 
-\Hypertarget{class_haxee___e_s_p32_a183ad9243538b4d092080b81a704e105}\label{class_haxee___e_s_p32_a183ad9243538b4d092080b81a704e105} 
-bool {\bfseries client\+Connected} ()
-\item 
-\Hypertarget{class_haxee___e_s_p32_ae671974655adce8cf8c3d81c401ed9a9}\label{class_haxee___e_s_p32_ae671974655adce8cf8c3d81c401ed9a9} 
-void {\bfseries client\+Loop} ()
-\item 
-\Hypertarget{class_haxee___e_s_p32_a3ed0f8577497b73bdebe6a4343454876}\label{class_haxee___e_s_p32_a3ed0f8577497b73bdebe6a4343454876} 
-void {\bfseries time\+Loop} ()
-\item 
-\Hypertarget{class_haxee___e_s_p32_a57dd5c37a603041c93aea1629a23f057}\label{class_haxee___e_s_p32_a57dd5c37a603041c93aea1629a23f057} 
-void {\bfseries light\+Led} (Message\+Type type)
-\item 
+bool \mbox{\hyperlink{class_haxee___e_s_p32_a660e416cc7700c6abf85f61d6fb7e3c0}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Úvodné nastavenie. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_haxee___e_s_p32_af5c7af97da34a25e4a21677dc3dddc98}{format\+Message}} (String card\+ID)
+\begin{DoxyCompactList}\small\item\em Naformátovanie správy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haxee___e_s_p32_a3ed0f8577497b73bdebe6a4343454876}{time\+Loop}} ()
+\begin{DoxyCompactList}\small\item\em Aktualizácia času. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haxee___e_s_p32_ad09cb6a53faef6c342f73221ddc58e59}{error}} ()
+\begin{DoxyCompactList}\small\item\em Naznačenie problému blikaním LED diódy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentácia k metódam}
 \Hypertarget{class_haxee___e_s_p32_ad09cb6a53faef6c342f73221ddc58e59}\label{class_haxee___e_s_p32_ad09cb6a53faef6c342f73221ddc58e59} 
-void {\bfseries error} ()
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Statické verejné metódy}
-\begin{DoxyCompactItemize}
-\item 
-\Hypertarget{class_haxee___e_s_p32_ae311c6444a0dc559f493cce92fa2e6e3}\label{class_haxee___e_s_p32_ae311c6444a0dc559f493cce92fa2e6e3} 
-static void {\bfseries callback} (char \texorpdfstring{$\ast$}{*}topic, byte \texorpdfstring{$\ast$}{*}message, unsigned int length)
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Verejné atribúty}
-\begin{DoxyCompactItemize}
-\item 
-\Hypertarget{class_haxee___e_s_p32_ac462f3239b6d28630e45436270f65093}\label{class_haxee___e_s_p32_ac462f3239b6d28630e45436270f65093} 
-String {\bfseries topic} = \"{}\"{}
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Privátne metódy}
-\begin{DoxyCompactItemize}
-\item 
-\Hypertarget{class_haxee___e_s_p32_a40114867ecd4029ce85231674c29c2b7}\label{class_haxee___e_s_p32_a40114867ecd4029ce85231674c29c2b7} 
-bool {\bfseries setup\+\_\+wifi} ()
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Privátne atribúty}
-\begin{DoxyCompactItemize}
-\item 
-\Hypertarget{class_haxee___e_s_p32_a8686d35725149c0ba059d245bf8a310a}\label{class_haxee___e_s_p32_a8686d35725149c0ba059d245bf8a310a} 
-int {\bfseries \+\_\+success} \mbox{[}3\mbox{]} = \{0, 255, 0\}
-\item 
-\Hypertarget{class_haxee___e_s_p32_aff661e93b17f67d9b3401ed0181b31b8}\label{class_haxee___e_s_p32_aff661e93b17f67d9b3401ed0181b31b8} 
-int {\bfseries \+\_\+info} \mbox{[}3\mbox{]} = \{0, 0, 255\}
-\item 
-\Hypertarget{class_haxee___e_s_p32_a733c7ecf03c87ea491a783a0f3fcf25c}\label{class_haxee___e_s_p32_a733c7ecf03c87ea491a783a0f3fcf25c} 
-int {\bfseries \+\_\+error} \mbox{[}3\mbox{]} = \{255, 0, 0\}
-\item 
-\Hypertarget{class_haxee___e_s_p32_aeab5e021c46558d79030feeeb1eb1fed}\label{class_haxee___e_s_p32_aeab5e021c46558d79030feeeb1eb1fed} 
-char {\bfseries \+\_\+ssid} \mbox{[}100\mbox{]}
-\item 
-\Hypertarget{class_haxee___e_s_p32_a53649554c3ea9ebccd28ddfe72cff541}\label{class_haxee___e_s_p32_a53649554c3ea9ebccd28ddfe72cff541} 
-char {\bfseries \+\_\+password} \mbox{[}100\mbox{]}
-\item 
-\Hypertarget{class_haxee___e_s_p32_abb8aeaa7fab3c11e92095014ed89bcff}\label{class_haxee___e_s_p32_abb8aeaa7fab3c11e92095014ed89bcff} 
-char {\bfseries \+\_\+mqtt\+\_\+server} \mbox{[}100\mbox{]}
-\item 
-\Hypertarget{class_haxee___e_s_p32_a957a8eb095f5073caa06e2b1783362ca}\label{class_haxee___e_s_p32_a957a8eb095f5073caa06e2b1783362ca} 
-int {\bfseries \+\_\+mqtt\+\_\+port} = 1883
-\end{DoxyCompactItemize}
+\index{Haxee\_ESP32@{Haxee\_ESP32}!error@{error}}
+\index{error@{error}!Haxee\_ESP32@{Haxee\_ESP32}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily void Haxee\+\_\+\+ESP32\+::error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Naznačenie problému blikaním LED diódy. 
+
+Funkcia rozbliká integrovanú LED diódu na doske. \Hypertarget{class_haxee___e_s_p32_af5c7af97da34a25e4a21677dc3dddc98}\label{class_haxee___e_s_p32_af5c7af97da34a25e4a21677dc3dddc98} 
+\index{Haxee\_ESP32@{Haxee\_ESP32}!formatMessage@{formatMessage}}
+\index{formatMessage@{formatMessage}!Haxee\_ESP32@{Haxee\_ESP32}}
+\doxysubsubsection{\texorpdfstring{formatMessage()}{formatMessage()}}
+{\footnotesize\ttfamily String Haxee\+\_\+\+ESP32\+::format\+Message (\begin{DoxyParamCaption}\item[{String}]{card\+ID }\end{DoxyParamCaption})}
+
+
+
+Naformátovanie správy. 
+
+Funkcia vytvorí z parametrku card\+ID a aktuálneho času reťazec. card\+ID a aktuálny čas je rozdelené \texorpdfstring{$\vert$}{|}.
+
+\begin{DoxyReturn}{Návratová hodnota}
+výsledný reťazec vo formáte e2\+:1b\+:dd\+:2a\texorpdfstring{$\vert$}{|}rrrr-\/mm-\/dd\+Thh\+:mm\+:ssZ 
+\end{DoxyReturn}
+\Hypertarget{class_haxee___e_s_p32_a660e416cc7700c6abf85f61d6fb7e3c0}\label{class_haxee___e_s_p32_a660e416cc7700c6abf85f61d6fb7e3c0} 
+\index{Haxee\_ESP32@{Haxee\_ESP32}!setup@{setup}}
+\index{setup@{setup}!Haxee\_ESP32@{Haxee\_ESP32}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily bool Haxee\+\_\+\+ESP32\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Úvodné nastavenie. 
+
+Funkcia nastaví pin 2 (pin integrovanej LED diódy) na OUTPUT a spustí sa klient pre získavanie času
+
+\begin{DoxyReturn}{Návratová hodnota}
+vracia informáciu o tom, či pripojenie a nastavenie bolo úspešné alebo nie 
+\end{DoxyReturn}
+\Hypertarget{class_haxee___e_s_p32_a3ed0f8577497b73bdebe6a4343454876}\label{class_haxee___e_s_p32_a3ed0f8577497b73bdebe6a4343454876} 
+\index{Haxee\_ESP32@{Haxee\_ESP32}!timeLoop@{timeLoop}}
+\index{timeLoop@{timeLoop}!Haxee\_ESP32@{Haxee\_ESP32}}
+\doxysubsubsection{\texorpdfstring{timeLoop()}{timeLoop()}}
+{\footnotesize\ttfamily void Haxee\+\_\+\+ESP32\+::time\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Aktualizácia času. 
+
 
 
 Dokumentácia pre túto triedu bola generovaná z nasledujúcich súborov\+:\begin{DoxyCompactItemize}
