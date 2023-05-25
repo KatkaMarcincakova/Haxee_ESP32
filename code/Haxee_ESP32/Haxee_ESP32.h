@@ -41,6 +41,8 @@ public:
     void clientLoop();
     void timeLoop();
     void lightLed(MessageType type);
+    
+    void error();
 };
 
 #endif

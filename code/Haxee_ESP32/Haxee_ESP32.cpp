@@ -24,6 +24,13 @@ PubSubClient client(espClient);
 WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP);
 
+void Haxee_ESP32::error() {
+  delay(500);
+  digitalWrite(2,HIGH);
+  delay(500);
+  digitalWrite(2,LOW);
+}
+
 bool Haxee_ESP32::setup_wifi() {
     delay(10);
     Serial.println();
@@ -51,6 +58,8 @@ bool Haxee_ESP32::setup_wifi() {
 }
 
 bool Haxee_ESP32::setup() {
+    pinMode(2, OUTPUT);
+
     if (!ledstripe.setup()) {
         Serial.println("ledstripe setup FAIL");
         return false;
@@ -145,25 +154,30 @@ void Haxee_ESP32::callback(char* topic, byte* message, unsigned int length) {
 }
 
 void Haxee_ESP32::reconnect() {
+    unsigned long prev_millis = 0;
+
     while (!client.connected()) {
-    Serial.print("Attempting MQTT connection ");
-    Serial.print(_mqtt_server);
-    Serial.print(" ");
-    Serial.print(_mqtt_port);
-    Serial.print(" ...");
-    
-    if (client.connect("ESP32Client")) {
-      Serial.println("connected");
-      
-      client.subscribe("start/checkResult");
-    } else {
-      Serial.print("failed, rc=");
-      Serial.print(client.state());
-      Serial.println(" try again in 5 seconds");
-      
-      delay(5000);
+      digitalWrite(2,HIGH);
+      if ((millis() - prev_millis > 5000)) {
+          prev_millis - millis();
+          Serial.print("Attempting MQTT connection ");
+          Serial.print(_mqtt_server);
+          Serial.print(" ");
+          Serial.print(_mqtt_port);
+          Serial.print(" ...");
+          
+          if (client.connect("ESP32Client")) {
+            Serial.println("connected");
+            
+            client.subscribe("start/checkResult");
+          } else {
+            Serial.print("failed, rc=");
+            Serial.print(client.state());
+            Serial.println(" try again in 5 seconds");
+          }
+      }
     }
-  }
+    digitalWrite(2,LOW);
 }
 
 bool Haxee_ESP32::clientConnected() {

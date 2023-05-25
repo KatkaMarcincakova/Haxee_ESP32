@@ -1,14 +1,17 @@
 #include "Haxee_ESP32.h"
 
 void setup() {
-	Haxee_ESP32 device("dominion2.4", "bobalkY21a", "192.168.0.244", 1883, "2023/start/cardID");
+	Haxee_ESP32 device("dominion2.4", "bobalk21a", "192.168.0.244", 1883, "2023/start/cardID");
     Serial.begin(9600);
     if (device.setup()) {
-		Serial.println("setup OK");
-		for (;;) {
-			cardReader(device);
-		}
+  		Serial.println("setup OK");
+  		for (;;) {
+  			cardReader(device);
+  		}
     } else {
+  		for (;;) {
+        device.error();
+      }
       	Serial.println("setup FAIL");  
     }
 }
