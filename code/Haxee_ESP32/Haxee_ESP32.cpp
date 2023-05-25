@@ -6,6 +6,7 @@
 #include <KiTECH_LEDStripe.h>
 #include <KiTECH_RC522.h>
 #include "Haxee_ESP32.h"
+#include "Haxee_ESP32_LEDStripe.h"
 
 Haxee_ESP32::Haxee_ESP32(String ssid, String password, String mqtt_server, int mqtt_port, String t) {
     ssid.toCharArray(_ssid, (ssid.length() + 1));
@@ -17,7 +18,7 @@ Haxee_ESP32::Haxee_ESP32(String ssid, String password, String mqtt_server, int m
 
 Haxee_ESP32::Haxee_ESP32() {}
 
-KiTECH_LEDStripe ledstripe;
+Haxee_ESP32_LEDStripe ledstripe;
 KiTECH_RC522 reader;
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -61,10 +62,8 @@ bool Haxee_ESP32::setup() {
     pinMode(2, OUTPUT);
 
     if (!ledstripe.setup()) {
-        Serial.println("ledstripe setup FAIL");
         return false;
     }
-    Serial.println("ledstripe setup OK");
     
     if (!reader.setup()) {
         Serial.println("reader setup FAIL");
@@ -89,19 +88,13 @@ bool Haxee_ESP32::setup() {
 void Haxee_ESP32::setupMessageColor(MessageType type, int r, int g, int b) {
     switch (type) {
         case Error:
-            _error[0] = r;
-            _error[1] = g;
-            _error[2] = b;
+            ledstripe.setError(r, b, g);
             break;
         case Info:
-            _info[0] = r;
-            _info[1] = g;
-            _info[2] = b;
+            ledstripe.setInfo(r, b, g);
             break;
         case Success:
-            _success[0] = r;
-            _success[1] = g;
-            _success[2] = b;
+            ledstripe.setSuccess(r, b, g);
             break;
         default:
             break;
@@ -110,11 +103,11 @@ void Haxee_ESP32::setupMessageColor(MessageType type, int r, int g, int b) {
 
 void Haxee_ESP32::lightLed(MessageType type) {
     if (type == Error) {
-        ledstripe.show_color(_error[0], _error[1], _error[2]);
+        ledstripe.lightError();
     } else if (type == Success) {
-        ledstripe.show_color(_success[0], _success[1], _success[2]);
+        ledstripe.lightSuccess();
     } else {
-        ledstripe.show_color(_info[0], _info[1], _info[2]);
+        ledstripe.lightInfo();
     }
 }
 

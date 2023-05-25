@@ -1,0 +1,33 @@
+\begin{theindex}
+
+  \item {Haxee\_ESP32}, \hyperpage{5}
+  \item {Haxee\_ESP32\_LEDStripe}, \hyperpage{6}
+    \subitem {lightError}, \hyperpage{6}
+    \subitem {lightInfo}, \hyperpage{6}
+    \subitem {lightSuccess}, \hyperpage{7}
+    \subitem {setError}, \hyperpage{7}
+    \subitem {setInfo}, \hyperpage{7}
+    \subitem {setSuccess}, \hyperpage{8}
+    \subitem {setup}, \hyperpage{8}
+
+  \indexspace
+
+  \item {lightError}
+    \subitem {Haxee\_ESP32\_LEDStripe}, \hyperpage{6}
+  \item {lightInfo}
+    \subitem {Haxee\_ESP32\_LEDStripe}, \hyperpage{6}
+  \item {lightSuccess}
+    \subitem {Haxee\_ESP32\_LEDStripe}, \hyperpage{7}
+
+  \indexspace
+
+  \item {setError}
+    \subitem {Haxee\_ESP32\_LEDStripe}, \hyperpage{7}
+  \item {setInfo}
+    \subitem {Haxee\_ESP32\_LEDStripe}, \hyperpage{7}
+  \item {setSuccess}
+    \subitem {Haxee\_ESP32\_LEDStripe}, \hyperpage{8}
+  \item {setup}
+    \subitem {Haxee\_ESP32\_LEDStripe}, \hyperpage{8}
+
+\end{theindex}

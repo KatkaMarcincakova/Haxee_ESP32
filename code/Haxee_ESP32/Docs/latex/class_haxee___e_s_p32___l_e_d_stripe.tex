@@ -1,0 +1,149 @@
+\doxysection{Dokumentácia triedy Haxee\+\_\+\+ESP32\+\_\+\+LEDStripe}
+\hypertarget{class_haxee___e_s_p32___l_e_d_stripe}{}\label{class_haxee___e_s_p32___l_e_d_stripe}\index{Haxee\_ESP32\_LEDStripe@{Haxee\_ESP32\_LEDStripe}}
+\doxysubsubsection*{Verejné metódy}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_haxee___e_s_p32___l_e_d_stripe_acede9a7e5401f5e632a2d23701c90b05}\label{class_haxee___e_s_p32___l_e_d_stripe_acede9a7e5401f5e632a2d23701c90b05} 
+{\bfseries Haxee\+\_\+\+ESP32\+\_\+\+LEDStripe} ()
+\begin{DoxyCompactList}\small\item\em Konštruktor triedy \doxylink{class_haxee___e_s_p32___l_e_d_stripe}{Haxee\+\_\+\+ESP32\+\_\+\+LEDStripe}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_haxee___e_s_p32___l_e_d_stripe_a2cbb36ce627f48c9d2cf1021bc7494c0}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Nastavenie modulu LED pásika. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haxee___e_s_p32___l_e_d_stripe_a36c9cfa2e76ba5bd57ae7336e7ed46dc}{light\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Rozsvietenie LED pásika na farbu značiacu chybu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haxee___e_s_p32___l_e_d_stripe_a7ebd8d2f6f4f5b1c93de9b618c507e9e}{light\+Success}} ()
+\begin{DoxyCompactList}\small\item\em Rozsvietenie LED pásika na farbu značiacu úspešný úkon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haxee___e_s_p32___l_e_d_stripe_ab0d4a26b089351df3cae772b35b7762d}{light\+Info}} ()
+\begin{DoxyCompactList}\small\item\em Rozsvietenie LED pásika na základnú / informačnú farbu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haxee___e_s_p32___l_e_d_stripe_a905537d36939d564f9525113ba77d929}{set\+Error}} (int r, int g, int b)
+\begin{DoxyCompactList}\small\item\em Nastavenie farby pre chybu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haxee___e_s_p32___l_e_d_stripe_a82c5b0bb4ff9e56cf5dfb88f759cfba8}{set\+Success}} (int r, int g, int b)
+\begin{DoxyCompactList}\small\item\em Nastavenie farby pre úspešný úkon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_haxee___e_s_p32___l_e_d_stripe_a64f219cb8be599c5e454d48c1a508115}{set\+Info}} (int r, int g, int b)
+\begin{DoxyCompactList}\small\item\em Nastavenie informačnej farby. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Privátne atribúty}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_haxee___e_s_p32___l_e_d_stripe_aa12c8506b87e3e2e87f58a2ab9b19344}\label{class_haxee___e_s_p32___l_e_d_stripe_aa12c8506b87e3e2e87f58a2ab9b19344} 
+int {\bfseries \+\_\+success} \mbox{[}3\mbox{]} = \{0, 255, 0\}
+\item 
+\Hypertarget{class_haxee___e_s_p32___l_e_d_stripe_aeabe7e9de5f9ce560d4c10b4ff12569d}\label{class_haxee___e_s_p32___l_e_d_stripe_aeabe7e9de5f9ce560d4c10b4ff12569d} 
+int {\bfseries \+\_\+info} \mbox{[}3\mbox{]} = \{0, 0, 255\}
+\item 
+\Hypertarget{class_haxee___e_s_p32___l_e_d_stripe_ae81f44dc203a2bc6063073c5cd113982}\label{class_haxee___e_s_p32___l_e_d_stripe_ae81f44dc203a2bc6063073c5cd113982} 
+int {\bfseries \+\_\+error} \mbox{[}3\mbox{]} = \{255, 0, 0\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentácia k metódam}
+\Hypertarget{class_haxee___e_s_p32___l_e_d_stripe_a36c9cfa2e76ba5bd57ae7336e7ed46dc}\label{class_haxee___e_s_p32___l_e_d_stripe_a36c9cfa2e76ba5bd57ae7336e7ed46dc} 
+\index{Haxee\_ESP32\_LEDStripe@{Haxee\_ESP32\_LEDStripe}!lightError@{lightError}}
+\index{lightError@{lightError}!Haxee\_ESP32\_LEDStripe@{Haxee\_ESP32\_LEDStripe}}
+\doxysubsubsection{\texorpdfstring{lightError()}{lightError()}}
+{\footnotesize\ttfamily void Haxee\+\_\+\+ESP32\+\_\+\+LEDStripe\+::light\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rozsvietenie LED pásika na farbu značiacu chybu. 
+
+Funkcia rozsvieti LED pásik na farbu, ktorá bola nastavená ako chybová farba \Hypertarget{class_haxee___e_s_p32___l_e_d_stripe_ab0d4a26b089351df3cae772b35b7762d}\label{class_haxee___e_s_p32___l_e_d_stripe_ab0d4a26b089351df3cae772b35b7762d} 
+\index{Haxee\_ESP32\_LEDStripe@{Haxee\_ESP32\_LEDStripe}!lightInfo@{lightInfo}}
+\index{lightInfo@{lightInfo}!Haxee\_ESP32\_LEDStripe@{Haxee\_ESP32\_LEDStripe}}
+\doxysubsubsection{\texorpdfstring{lightInfo()}{lightInfo()}}
+{\footnotesize\ttfamily void Haxee\+\_\+\+ESP32\+\_\+\+LEDStripe\+::light\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rozsvietenie LED pásika na základnú / informačnú farbu. 
+
+Funkcia rozsvieti LED pásik na farbu, ktorá bola nastavená ako informačná farba \Hypertarget{class_haxee___e_s_p32___l_e_d_stripe_a7ebd8d2f6f4f5b1c93de9b618c507e9e}\label{class_haxee___e_s_p32___l_e_d_stripe_a7ebd8d2f6f4f5b1c93de9b618c507e9e} 
+\index{Haxee\_ESP32\_LEDStripe@{Haxee\_ESP32\_LEDStripe}!lightSuccess@{lightSuccess}}
+\index{lightSuccess@{lightSuccess}!Haxee\_ESP32\_LEDStripe@{Haxee\_ESP32\_LEDStripe}}
+\doxysubsubsection{\texorpdfstring{lightSuccess()}{lightSuccess()}}
+{\footnotesize\ttfamily void Haxee\+\_\+\+ESP32\+\_\+\+LEDStripe\+::light\+Success (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rozsvietenie LED pásika na farbu značiacu úspešný úkon. 
+
+Funkcia rozsvieti LED pásik na farbu, ktorá bola nastavená ako úspešná farba \Hypertarget{class_haxee___e_s_p32___l_e_d_stripe_a905537d36939d564f9525113ba77d929}\label{class_haxee___e_s_p32___l_e_d_stripe_a905537d36939d564f9525113ba77d929} 
+\index{Haxee\_ESP32\_LEDStripe@{Haxee\_ESP32\_LEDStripe}!setError@{setError}}
+\index{setError@{setError}!Haxee\_ESP32\_LEDStripe@{Haxee\_ESP32\_LEDStripe}}
+\doxysubsubsection{\texorpdfstring{setError()}{setError()}}
+{\footnotesize\ttfamily void Haxee\+\_\+\+ESP32\+\_\+\+LEDStripe\+::set\+Error (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Nastavenie farby pre chybu. 
+
+Funkcia nastaví nový RGB kód pre chybovú farbu
+
+
+\begin{DoxyParams}{Parametre}
+{\em r} & Prvá (RED) hodnota z RGB kódu \\
+\hline
+{\em g} & Druhá (GREEN) hodnota z RGB kódu \\
+\hline
+{\em b} & Tretia (BLUE) hodnota z RGB kódu \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_haxee___e_s_p32___l_e_d_stripe_a64f219cb8be599c5e454d48c1a508115}\label{class_haxee___e_s_p32___l_e_d_stripe_a64f219cb8be599c5e454d48c1a508115} 
+\index{Haxee\_ESP32\_LEDStripe@{Haxee\_ESP32\_LEDStripe}!setInfo@{setInfo}}
+\index{setInfo@{setInfo}!Haxee\_ESP32\_LEDStripe@{Haxee\_ESP32\_LEDStripe}}
+\doxysubsubsection{\texorpdfstring{setInfo()}{setInfo()}}
+{\footnotesize\ttfamily void Haxee\+\_\+\+ESP32\+\_\+\+LEDStripe\+::set\+Info (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Nastavenie informačnej farby. 
+
+Funkcia nastaví nový RGB kód pre inoformačnú farbu
+
+
+\begin{DoxyParams}{Parametre}
+{\em r} & Prvá (RED) hodnota z RGB kódu \\
+\hline
+{\em g} & Druhá (GREEN) hodnota z RGB kódu \\
+\hline
+{\em b} & Tretia (BLUE) hodnota z RGB kódu \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_haxee___e_s_p32___l_e_d_stripe_a82c5b0bb4ff9e56cf5dfb88f759cfba8}\label{class_haxee___e_s_p32___l_e_d_stripe_a82c5b0bb4ff9e56cf5dfb88f759cfba8} 
+\index{Haxee\_ESP32\_LEDStripe@{Haxee\_ESP32\_LEDStripe}!setSuccess@{setSuccess}}
+\index{setSuccess@{setSuccess}!Haxee\_ESP32\_LEDStripe@{Haxee\_ESP32\_LEDStripe}}
+\doxysubsubsection{\texorpdfstring{setSuccess()}{setSuccess()}}
+{\footnotesize\ttfamily void Haxee\+\_\+\+ESP32\+\_\+\+LEDStripe\+::set\+Success (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Nastavenie farby pre úspešný úkon. 
+
+Funkcia nastaví nový RGB kód pre úspešnú farbu
+
+
+\begin{DoxyParams}{Parametre}
+{\em r} & Prvá (RED) hodnota z RGB kódu \\
+\hline
+{\em g} & Druhá (GREEN) hodnota z RGB kódu \\
+\hline
+{\em b} & Tretia (BLUE) hodnota z RGB kódu \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_haxee___e_s_p32___l_e_d_stripe_a2cbb36ce627f48c9d2cf1021bc7494c0}\label{class_haxee___e_s_p32___l_e_d_stripe_a2cbb36ce627f48c9d2cf1021bc7494c0} 
+\index{Haxee\_ESP32\_LEDStripe@{Haxee\_ESP32\_LEDStripe}!setup@{setup}}
+\index{setup@{setup}!Haxee\_ESP32\_LEDStripe@{Haxee\_ESP32\_LEDStripe}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily bool Haxee\+\_\+\+ESP32\+\_\+\+LEDStripe\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Nastavenie modulu LED pásika. 
+
+\begin{DoxyReturn}{Návratová hodnota}
+vracia informáciu o tom, či nastavenie bolo úspešné alebo nie 
+\end{DoxyReturn}
+
+
+Dokumentácia pre túto triedu bola generovaná z nasledujúcich súborov\+:\begin{DoxyCompactItemize}
+\item 
+Haxee\+\_\+\+ESP32\+\_\+\+LEDStripe.\+h\item 
+Haxee\+\_\+\+ESP32\+\_\+\+LEDStripe.\+cpp\end{DoxyCompactItemize}
