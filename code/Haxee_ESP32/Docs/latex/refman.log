@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.24)  25 MAY 2023 20:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.24)  25 MAY 2023 20:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -978,32 +978,42 @@ Underfull \hbox (badness 10000) detected at line 141
 [][][]
  []
 
-) [8]
+) (class_haxee___e_s_p32___m_f_r_c522.tex
+Underfull \hbox (badness 10000) detected at line 26
+[][][]
+ []
+
+[8]
+Underfull \hbox (badness 10000) detected at line 39
+[][][]
+ []
+
+) [9] [10
+
+]
 Kapitola 4.
 (_haxee___e_s_p32_8h_source.tex) (_haxee___e_s_p32___l_e_d_stripe_8h_source.tex
-[9
-
-]) (_haxee___e_s_p32___m_f_r_c522_8h_source.tex)
-(_haxee___e_s_p32___m_q_t_t_8h_source.tex) [10] (refman.ind
+[11]) (_haxee___e_s_p32___m_f_r_c522_8h_source.tex)
+(_haxee___e_s_p32___m_q_t_t_8h_source.tex) [12] (refman.ind
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 22.39185pt on input line 1.
- [11
+ [13
 
 
 
 
 ]) (refman.aux)
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 650BB79969223960D3326DD0D5136496;3653.
+(rerunfilecheck)             Checksum: 7DBAF5A23811A1DB15904BB26B6A4BB7;4486.
  ) 
 Here is how much of TeX's memory you used:
- 19502 strings out of 475385
- 327331 string characters out of 2776906
- 705335 words of memory out of 3000000
- 40432 multiletter control sequences out of 15000+600000
+ 19524 strings out of 475385
+ 328163 string characters out of 2776906
+ 705541 words of memory out of 3000000
+ 40442 multiletter control sequences out of 15000+600000
  519069 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,15n,117p,589b,570s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 99i,15n,117p,590b,570s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/katul/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:
 /Users/katul/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb><C:/Users/katul/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucr
@@ -1013,9 +1023,9 @@ ic/uhvb8a.pfb><C:/Users/katul/AppData/Local/Programs/MiKTeX/fonts/type1/urw/hel
 vetic/uhvb8ac.pfb><C:/Users/katul/AppData/Local/Programs/MiKTeX/fonts/type1/urw
 /helvetic/uhvr8a.pfb><C:/Users/katul/AppData/Local/Programs/MiKTeX/fonts/type1/
 urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (15 pages, 134677 bytes).
+Output written on refman.pdf (17 pages, 144980 bytes).
 PDF statistics:
- 326 PDF objects out of 1000 (max. 8388607)
- 85 named destinations out of 1000 (max. 500000)
- 169 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 373 PDF objects out of 1000 (max. 8388607)
+ 95 named destinations out of 1000 (max. 500000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 

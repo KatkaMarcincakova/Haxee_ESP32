@@ -9,6 +9,9 @@
     \subitem {setInfo}, \hyperpage{7}
     \subitem {setSuccess}, \hyperpage{8}
     \subitem {setup}, \hyperpage{8}
+  \item {Haxee\_ESP32\_MFRC522}, \hyperpage{8}
+    \subitem {readCard}, \hyperpage{9}
+    \subitem {setup}, \hyperpage{9}
 
   \indexspace
 
@@ -21,6 +24,11 @@
 
   \indexspace
 
+  \item {readCard}
+    \subitem {Haxee\_ESP32\_MFRC522}, \hyperpage{9}
+
+  \indexspace
+
   \item {setError}
     \subitem {Haxee\_ESP32\_LEDStripe}, \hyperpage{7}
   \item {setInfo}
@@ -29,5 +37,6 @@
     \subitem {Haxee\_ESP32\_LEDStripe}, \hyperpage{8}
   \item {setup}
     \subitem {Haxee\_ESP32\_LEDStripe}, \hyperpage{8}
+    \subitem {Haxee\_ESP32\_MFRC522}, \hyperpage{9}
 
 \end{theindex}

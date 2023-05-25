@@ -14,3 +14,8 @@
 \indexentry{setSuccess@{setSuccess}!Haxee\_ESP32\_LEDStripe@{Haxee\_ESP32\_LEDStripe}|hyperpage}{8}
 \indexentry{Haxee\_ESP32\_LEDStripe@{Haxee\_ESP32\_LEDStripe}!setup@{setup}|hyperpage}{8}
 \indexentry{setup@{setup}!Haxee\_ESP32\_LEDStripe@{Haxee\_ESP32\_LEDStripe}|hyperpage}{8}
+\indexentry{Haxee\_ESP32\_MFRC522@{Haxee\_ESP32\_MFRC522}|hyperpage}{8}
+\indexentry{Haxee\_ESP32\_MFRC522@{Haxee\_ESP32\_MFRC522}!readCard@{readCard}|hyperpage}{9}
+\indexentry{readCard@{readCard}!Haxee\_ESP32\_MFRC522@{Haxee\_ESP32\_MFRC522}|hyperpage}{9}
+\indexentry{Haxee\_ESP32\_MFRC522@{Haxee\_ESP32\_MFRC522}!setup@{setup}|hyperpage}{9}
+\indexentry{setup@{setup}!Haxee\_ESP32\_MFRC522@{Haxee\_ESP32\_MFRC522}|hyperpage}{9}

@@ -3,12 +3,11 @@
 #include <Wire.h>
 #include <NTPClient.h>
 #include <WiFiUdp.h>
-#include <KiTECH_LEDStripe.h>
-#include <KiTECH_RC522.h>
 #include "Haxee_ESP32.h"
 #include "Haxee_ESP32_LEDStripe.h"
+#include "Haxee_ESP32_MFRC522.h"
 
-Haxee_ESP32::Haxee_ESP32(String ssid, String password, String mqtt_server, int mqtt_port, String t) {
+Haxee_ESP32::Haxee_ESP32(String ssid, String password, String mqtt_server, int mqtt_port, String t_sub, String t_pub) {
     ssid.toCharArray(_ssid, (ssid.length() + 1));
     password.toCharArray(_password, (password.length() + 1));
     mqtt_server.toCharArray(_mqtt_server, (mqtt_server.length() + 1));
@@ -19,7 +18,8 @@ Haxee_ESP32::Haxee_ESP32(String ssid, String password, String mqtt_server, int m
 Haxee_ESP32::Haxee_ESP32() {}
 
 Haxee_ESP32_LEDStripe ledstripe;
-KiTECH_RC522 reader;
+Haxee_ESP32_MFRC522 reader;
+
 WiFiClient espClient;
 PubSubClient client(espClient);
 WiFiUDP ntpUDP;
@@ -66,7 +66,6 @@ bool Haxee_ESP32::setup() {
     }
     
     if (!reader.setup()) {
-        Serial.println("reader setup FAIL");
         return false;
     }
     Serial.println("reader setup OK");
@@ -112,11 +111,7 @@ void Haxee_ESP32::lightLed(MessageType type) {
 }
 
 String Haxee_ESP32::readCard() {
-    if (reader.isNewCardPresent() && reader.readCardSerial()) {
-        return reader.readCurrentCard();
-    }
-    
-    return "Waiting for card";
+    return reader.readCard();
 }
 
 void Haxee_ESP32::callback(char* topic, byte* message, unsigned int length) {
