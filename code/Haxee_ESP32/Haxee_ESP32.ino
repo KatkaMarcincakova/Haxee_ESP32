@@ -11,16 +11,18 @@ void setup() {
 
     Serial.begin(9600);
 
-    if (mqtt.setup() && ledstripe.setup() && reader.setup() && helper.setup()) {
+	helper.setup()
+
+    if (mqtt.setup() && ledstripe.setup() && reader.setup()) {
   		Serial.println("setup OK");
   		for (;;) {
   			cardReader(mqtt, ledstripe, reader, helper);
   		}
     } else {
-  		for (;;) {
-        helper.error();
-      }
-      	Serial.println("setup FAIL");  
+		Serial.println("setup FAIL");
+		for (;;) {
+        	helper.error();
+		}  
     }
 }
 

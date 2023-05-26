@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.24)  25 MAY 2023 23:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.24)  26 MAY 2023 16:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -949,43 +949,42 @@ File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 6.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 7.
+(Font)              scaled to size 8.09995pt on input line 8.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 7.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 8.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 7.
+(Font)              scaled to size 8.09995pt on input line 8.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 8.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 6.29996pt on input line 8.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 16.
+(Font)              scaled to size 10.79993pt on input line 19.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 21.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 21
+(Font)              scaled to size 7.19995pt on input line 24.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 24
 .
 
 (C:\Users\katul\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 31.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 34.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 31.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 34.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 8.99994pt on input line 39.
+(Font)              scaled to size 8.99994pt on input line 42.
 
-Underfull \hbox (badness 10000) detected at line 39
+Underfull \hbox (badness 10000) detected at line 42
 [][][]
  []
 
 [5]
-Underfull \hbox (badness 10000) detected at line 54
+Underfull \hbox (badness 10000) detected at line 57
 [][][]
  []
 
-) (class_haxee___e_s_p32___l_e_d_stripe.tex
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 8.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.29996pt on input line 8.
- [6] [7]
+) (class_haxee___e_s_p32___l_e_d_stripe.tex [6] [7]
 Underfull \hbox (badness 10000) detected at line 141
 [][][]
  []
@@ -1036,10 +1035,10 @@ Package rerunfilecheck Info: File `refman.out' has not changed.
 (rerunfilecheck)             Checksum: DB6613EF10CF2B27A1DD4B7B8E468497;7521.
  ) 
 Here is how much of TeX's memory you used:
- 19597 strings out of 475385
- 329969 string characters out of 2776906
- 705104 words of memory out of 3000000
- 40485 multiletter control sequences out of 15000+600000
+ 19599 strings out of 475385
+ 330099 string characters out of 2776906
+ 705146 words of memory out of 3000000
+ 40486 multiletter control sequences out of 15000+600000
  522982 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,16n,117p,590b,681s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1053,9 +1052,9 @@ w/helvetic/uhvb8a.pfb><C:/Users/katul/AppData/Local/Programs/MiKTeX/fonts/type1
 /urw/helvetic/uhvb8ac.pfb><C:/Users/katul/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/urw/helvetic/uhvr8a.pfb><C:/Users/katul/AppData/Local/Programs/MiKTeX/font
 s/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (21 pages, 188851 bytes).
+Output written on refman.pdf (21 pages, 189461 bytes).
 PDF statistics:
- 524 PDF objects out of 1000 (max. 8388607)
- 114 named destinations out of 1000 (max. 500000)
+ 527 PDF objects out of 1000 (max. 8388607)
+ 115 named destinations out of 1000 (max. 500000)
  321 words of extra memory for PDF output out of 10000 (max. 10000000)
 
