@@ -13,6 +13,9 @@ class Haxee_ESP32_Helper
 private:
 
 public:
+    /**
+     * @brief Konštruktor triedy Haxee_ESP32_Helper.
+     */
     Haxee_ESP32_Helper();
 
     /**
